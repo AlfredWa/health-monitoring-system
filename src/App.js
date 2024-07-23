@@ -20,7 +20,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`https://e113-149-248-191-233.ngrok-free.app/get_current_patient_data/${currentPatientId}`);
+      const response = await fetch(`http://localhost:5301/get_current_patient_data/${currentPatientId}`);
       const data = await response.json();
       setPatientData(data);
       fetchHealthStatus();
@@ -31,7 +31,7 @@ function App() {
 
   const fetchHealthStatus = async () => {
     try {
-      const response = await fetch(`https://e113-149-248-191-233.ngrok-free.app/evaluate_current_health/`);
+      const response = await fetch(`http://localhost:5301/evaluate_current_health/`);
       const status = await response.json();
       setHealthStatus(status);
       console.log(status);
