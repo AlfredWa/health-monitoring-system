@@ -22,7 +22,7 @@ function PatientForm({ setCurrentPatientId }) {
 
     // Send the data to the backend using Fetch API
     try {
-      const response = await fetch(`https://e113-149-248-191-233.ngrok-free.app/submit_user_info/${patientId}`, {
+      const response = await fetch(`http://localhost:5301/submit_user_info/${patientId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
