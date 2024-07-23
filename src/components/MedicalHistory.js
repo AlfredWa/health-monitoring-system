@@ -6,7 +6,7 @@ function MedicalHistory({ patientId }) {
   useEffect(() => {
     const fetchMedicalHistory = async () => {
       try {
-        const response = await fetch(`http://localhost:5301/get_medical_history/${patientId}`);
+        const response = await fetch(`https://e113-149-248-191-233.ngrok-free.app/get_medical_history/${patientId}`);
         const data = await response.json();
         if (response.ok) {
           setMedicalHistory(data);
